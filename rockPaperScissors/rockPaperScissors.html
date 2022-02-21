@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const getUserChoice = userInput => {
+        userInput = prompt("Choose your option: rock, paper, scissors");
+        userInput= userInput.toLowerCase();
+        if(userInput ==='rock' || userInput ==='paper' || userInput ==='scissors' || userInput ==='bomb'){
+            return userInput;
+        }else{
+            console.log('Incorrect input. You have to put a correct word')
+        }
+    }
+
+    function getComputerChoice() {
+        let num = Math.floor(Math.random()*4);
+        if(num===0){
+            return 'rock';
+        }else if(num===1){
+            return 'paper';
+        }else if(num===2){
+            return 'scissors';
+        }else if(num===3){
+            return 'bomb';
+        }
+    }
+
+
+    function determineWinner(userChoice,computerChoice){
+        if(userChoice === computerChoice){
+          if(userChoice ==='bomb' && computerChoice === 'bomb'){
+          return 'Begin the 3rd Global World War has';
+        }
+            return 'Draw game';
+        }
+        if(userChoice ==='bomb'){
+          return 'BOOOMB! Master game! You\'ve destroyed your opponent! User won!This is a bomb';
+        }
+        if(computerChoice ==='bomb'){
+          return 'BOOOMB! Master game! Computer has destroyed you! Computer won!This is a bomb';
+        }
+        if(userChoice === 'rock'){
+            if(computerChoice === 'paper'){
+                return 'Computer won';
+            }else{
+                return 'User won';
+            }
+        }
+        if(userChoice === 'paper'){
+            if(computerChoice === 'scissors'){
+                return 'Computer won';
+            } else {
+                return 'User won';
+            }
+        }
+            if(userChoice === 'scissors'){
+                if(computerChoice === 'rock') {
+                    return 'Computer won';
+                } else {
+                    return 'User won';
+                }
+            }
+        }
+
+    const playGame = () => {
+      const userChoice = getUserChoice();
+      const computerChoice = getComputerChoice();
+      const isWinner = determineWinner(userChoice,computerChoice);
+      document.write('User has thrown ' + userChoice + "<br>");
+      document.write('Computer has thrown ' + computerChoice + "<br>");
+      document.write('The winner is: ' + isWinner + ' and this is in the end');
+    }
+
+    playGame();
+
+    </script>
+</body>
+</html>
