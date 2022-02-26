@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Segundo ejercicio Javascript</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+<script>
+    //AQUÍ VA EL CÓDIGO JAVASCRIPT
+    /*
+      0-3: Muy deficiente
+    3-5: Insuficiente
+    5-6: Suficiente
+    6-7: Bien
+    7-9: Notable
+    9-10: Sobresaliente
+     */
+    do{
+        var note= parseInt(prompt("Insert your punctuation:"));
+        if(note<0 || note>10){
+            alert("Back to introduce your punctuation");
+        }
+
+        switch(true){
+            case ((note >= 0.0) && (note <3.0)):
+                document.write(`You've insert a ${note}, so you have a very deficient.`);
+                break;
+            case ((note >= 3) && (note <5)):
+                document.write(`You've insert a ${note}, so you have a deficient.`);
+                break;
+            case ((note>=5) && (note<6)):
+                document.write(`You've insert a ${note}, so you have a sufficient.`);
+                break;
+            case ((note>=6) && (note<7)):
+                document.write(`You've insert a ${note}, so you have a good.`);
+                break;
+            case ((note>=7) && (note<9)):
+                document.write(`Yo0u've insert a ${note}, so you have a notable.`);
+                break;
+            case ((note>=9) && (note<=10)):
+                document.write (`You've insert a ${note}, so you have an excellent.`);
+                break;
+        }
+
+    }while(note<0 || note>10);
+
+
+
+
+
+</script>
+</body>
+</html>

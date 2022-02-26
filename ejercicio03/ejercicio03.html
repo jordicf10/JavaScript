@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejercicio 03 Javascript</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+<script>
+
+let resultado= "";
+
+        do{
+
+            let cadenas= prompt("");
+
+            if(cadenas==""){   //Si el string está vacío,
+                resultado +=cadenas;    //el acumulador no introducirá guión
+                //<br>
+            }else{    //Si se escribe algo,
+                resultado = resultado + " - " + cadenas;  //el acumulador introducirá guión
+            }
+        }while(confirm("Do you wanna keep introducing strings?"));   //mientras se confirme SÍ volverá a pedir el prompt de cadenas
+
+        document.write(resultado);    //Al pulsar cancelar, nos imprimirá el resultado de los strings acumulados
+</script>
+</body>
+</html>

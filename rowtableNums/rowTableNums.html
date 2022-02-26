@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p { text-align: center; border: 2px solid blue; font-weight:bolder; color: red; font-family: Verdana; font-size: 20px;}
+        table { text-align: center; width: 300px; height: 100px; border: 2px solid blue;}
+        thead { position: center; text-align:center; border: 2px solid blue;}
+        th {border: 2px solid blue;}
+    </style>
+</head>
+
+<body>
+
+<table>
+    <thead>DAY,MONTH,YEAR</thead>
+    <tbody>
+
+    <tr>
+        <th>DAY</th>
+        <th>MONTH</th>
+        <th>YEAR</th>
+    </tr>
+    <tr>
+        <td>
+            <p><button onclick="dayz()">Day</button> </p>
+            <script>
+                let day;
+                let auxDay;
+                function dayz(){
+                    do{
+                        day = prompt("Select your birthday day:");
+                        if(day<1 || day>31){
+                            alert('Error!You have to input a correct day');
+                        }
+                    }while((day<1 || day>31));
+
+                    auxDay = day;
+                    let definedDay = alert('Your birthday\'s day it\'s ' + day);
+                    return definedDay;
+                }
+                //let dayBirth = auxDay;
+            </script>
+        </td>
+        <td>
+            <p><button onclick="monthz()">Month</button></p>
+            <script>
+                let month;
+                let auxMonth;
+                function monthz(){
+                    do{
+                        month= prompt("Select your birthday's month:");
+                        if(month<1 || month>12){
+                            alert('Error!You have to input a correct month');
+                        }
+                    }while(month<1 || month>12);
+
+                    auxMonth = month;
+                    let definedMonth = alert('Your birthday\'s month it\'s ' + month);
+                    return definedMonth;
+                }
+                //let monthBirth = auxMonth;
+            </script>
+        </td>
+        <td>
+            <p><button onclick="yearz()">Year</button></p>
+            <script>
+                let year;
+                let auxYear;
+                function yearz(){
+                    do{
+                        year= prompt("Select your birthday's year:");
+                        if(year<1920){
+                            alert('Really?Are you alive?Congrats');
+                        }else if(year>2022){
+                            alert('Can i ask you a question: has dissapeared Spain with PP-Vox couple?');
+                        }
+                    }while(year<1920 || year>2022);
+
+                    auxYear = year;
+                    let definedYear = alert('Your birthday\'s year it\'s ' + year);
+                    return definedYear;
+                }
+                //let yearBirth = auxYear;
+            </script>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <p><button onclick="birthz()">Birthday's date</button></p>
+            <script>
+                function birthz() {
+                    let dayBirth = auxDay;
+                    let monthBirth = auxMonth;
+                    let yearBirth = auxYear;
+
+                    /*do {
+                        //if (dayBirth === '') {
+                            if (!dayBirth) {
+                                alert('You have to enter your day to print your birthday');
+                                dayz();
+                                dayBirth = dayz();
+                            //} else if (monthBirth === '') {
+                            } else if (!monthBirth) {
+                            alert('You have to enter your month to print your birthday');
+                            monthz();
+                            monthBirth = monthz();
+                        //} else if (yearBirth === '') {
+                            } else if (!yearBirth) {
+                            alert('You have to enter your year to print your birthday');
+                            yearz();
+                            yearBirth = yearz();
+                        //} else if (dayBirth === '' || monthBirth === '' || yearBirth === '') {
+                            } else if (!dayBirth || !monthBirth || !yearBirth) {
+                            alert('You have to enter all inputs to print your birthday');
+                            /*dayz();
+                            monthz();
+                            yearz();
+
+                            //alert('You have to enter any field in your birthday');
+                            /*}while(!dayBirth || !monthBirth || !yearBirth);
+                    do{
+                        alert('You have to enter any field in your birthday');
+                        break;
+                    }
+                        }
+                    //}while(dayBirth==='' || monthBirth==='' || yearBirth=='');
+                    //}while(!dayBirth || !monthBirth || !yearBirth);*/
+
+                    let definedBirth = alert('Your birthday is ' + dayBirth + ' / ' + monthBirth + ' / ' + yearBirth);
+                    console.log(definedBirth);
+
+                }
+
+            </script>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+<script>
+/*var filas = prompt("Introduce el número de filas");
+var columnas = prompt("Introduce el número de columnas");
+
+document.write("<table>Tabla números</table>" );
+
+for (i = 1; i <= columnas; i++) {
+    document.write(("<td>['']"));
+}
+
+for(i=1;i<=filas && i<=columnas;i++) {
+
+    document.write(("<tr>['']" + "<br>"));
+}*/
+</script>
+</body>
+</html>

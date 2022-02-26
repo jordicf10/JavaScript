@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>título</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+<script>
+    //AQUÍ VA EL CÓDIGO JAVASCRIPT
+    /*
+    Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un número deberá indicarse con un «alert» y seguir pidiendo.
+    Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.
+     */
+    let numbers;
+    let resultado= 0;
+    let count = 0;
+    do {
+        numbers = prompt("Introduce your number:");
+        if (Number(numbers) == numbers && count == 0 && typeof "number") {
+            numbers = Number(numbers);
+            resultado += numbers;
+            document.write(numbers);
+            count++;
+            /*if(typeof numbers!= "number"){
+                alert(numbers + " is not an integer number. Back to introduce a correct number");
+            }*/
+
+        } else if (Number(numbers) == numbers && count > 0) {
+            numbers = Number(numbers);
+            resultado += numbers;
+            document.write(" + " + numbers);
+            count++;
+
+        } /*else{
+            alert(numbers + " is not an integer number. Back to introduce a correct number");
+        } *//*else if(numbers != undefined){
+
+            //alert(numbers + " is not an integer number. Back to introduce a correct number");
+        }*/
+    }
+
+    //while(numbers==Number(numbers));
+    while(numbers!=undefined);
+
+
+
+    document.write(" = " + resultado);
+
+</script>
+</body>
+</html>
