@@ -9,7 +9,7 @@
     },
     petition : function (){
         let salut = person.salutation();
-        document.write(salut + ' I\'m ' + person.name + ' and I\m ' + person.age + ' years old. I respect all people LGTBI but I\'m defined as ' + person.genre + '. Right now, I\'m ' + person.job + ' and my favorite team is ' + person.team)
+        document.write(salut + ' I\'m ' + person.name + ' and I\m ' + person.age + ' years old. I\'m defined as ' + person.genre + '. Right now, I\'m ' + person.job + ' and my favorite team is ' + person.team)
 
     }
 }
