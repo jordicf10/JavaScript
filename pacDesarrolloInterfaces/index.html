@@ -4,44 +4,124 @@
     <meta charset="UTF-8">
     <title>PAC DE DESARROLLO</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+    
 </head>
 <body>
-    <p>PAC DE DESAROLLO INTERFACES</p>
-    <h3>Participantes en la carrera</h3>
-
+    <audio id ="introJuego" autoplay loop>
+        <source src="intro.mp3" type="audio/mpeg">
+    </audio>
+    <audio id ="elegirParticipantes">
+        <source src="intro.mp3" type="audio/mpeg">
+    </audio>
+    <div class="desactivaAudio">
+        <button id="activar" class= "activar" onclick="playAudio()">Activar sonido</button>
+        <button id="desactivar" class= "desactivar" onclick="stopAudio()">Desactivar sonido</button> 
+    <svg viewBox="">
+        <symbol id="s-text">
+          <text text-anchor="middle" x="50%" y="-60%" dy="2.35em">Super Smash Bros Karts</text>
+        </symbol>
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+      </svg>
+    </div>
 
 <div class="proyecto">
-<label for="coches">Elige el número de participantes:</label>
-
-<div class = "partic" id="partic_content">
-<select name="participantes" id="numParticipantes">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="6">6</option>
-  <option value="7">7</option>
-  <option value="8">8</option>
-</select>
-<input type="submit" value="Enviar" onclick="nParticipantes()">
-<div class="coches" id="numCoches">
-    <!--<div class="carrera"><img src="car1.png" id="c1" class="coches" width="150" height="100"></div>
-    <div class="carrera"><img src="car2.png" id="c2" class="coches" width="150" height="100"></div>
-    <div class="carrera"><img src="car3.png" id="c3" class="coches" width="150" height="100"></div>
-    <div class="carrera"><img src="car4.png" id="c4" class="coches" width="150" height="100"></div>
-    <div class="carrera"><img src="car5.png" id="c5" class="coches" width="150" height="100"></div>
-    <div class="carrera"><img src="car6.png" id="c6" class="coches" width="150" height="100"></div>
-    <div class="carrera"><img src="car7.png" id="c7" class="coches" width="150" height="100"></div>
-    <div class="carrera"><img src="car8.png" id="c8" class="coches" width="150" height="100"></div>-->
+    
+    <label for="coches"><h5>Elige el número de participantes:</h5></label>
+        <div class = "nParticipantes"></div>
+            <select id="numParticipantes">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </div>
+    
+    <div class="botones">
+        <button id="start" class="start">START</button>
+        <span class="spacing"></span>
+        <button id="reiniciar" class="reiniciar">REINICIAR</button>
+    </div>
+        <div class="resultadoCarrera">
+            <div class="resultadoCoche1">
+                <h4>Coche 1</h4>
+                <bold><span>Posición: </span><span id="posicionCoche1"></span></bold>
+                <br/>
+                <bold><span>Tiempo: </span><span id="tiempoCoche1"></span></bold>
+            </div>
+            <div class="resultadoCoche2">
+                <h4>Coche 2</h4>
+                <bold><span>Posición: </span><span id="posicionCoche2"></span></bold>
+                <br/>
+                <bold><span>Tiempo: </span><span id="tiempoCoche2"></span></bold>
+            </div>
+            <div class="resultadoCoche3">
+                <h4>Coche 3</h4>
+                <bold><span>Posición: </span><span id="posicionCoche3"></span></bold>
+                <br/>
+                <bold><span>Tiempo: </span><span id="tiempoCoche3"></span></bold>
+            </div>
+            <div class="resultadoCoche4">
+                <h4>Coche 4</h4>
+                <bold><span>Posición: </span><span id="posicionCoche4"></span></bold>
+                <br/>
+                <bold><span>Tiempo: </span><span id="tiempoCoche4"></span></bold>
+            </div>
+            <div class="resultadoCoche5">
+                <h4>Coche 5</h4>
+                <bold><span>Posición: </span><span id="posicionCoche5"></span></bold>
+                <br/>
+                <bold><span>Tiempo: </span><span id="tiempoCoche5"></span></bold>
+            </div>
+            <div class="resultadoCoche6">
+                <h4>Coche 6</h4>
+                <bold><span>Posición: </span><span id="posicionCoche6"></span></bold>
+                <br/>
+                <bold><span>Tiempo: </span><span id="tiempoCoche6"></span></bold>
+            </div>
+            <div class="resultadoCoche7">
+                <h4>Coche 7</h4>
+                <bold><span>Posición: </span><span id="posicionCoche7"></span></bold>
+                <br/>
+                <bold><span>Tiempo: </span><span id="tiempoCoche7"></span></bold>
+            </div>
+            <div class="resultadoCoche8">
+                <h4>Coche 8</h4>
+                <bold><span>Posición: </span><span id="posicionCoche8"></span></bold>
+                <br/>
+                <bold><span>Tiempo: </span><span id="tiempoCoche8"></span></bold>
+            </div>
+            <div class="resultadoCoche9">
+                <h4>Coche 9</h4>
+                <bold><span>Posición: </span><span id="posicionCoche9"></span></bold>
+                <br/>
+                <bold><span>Tiempo: </span><span id="tiempoCoche9"></span></bold>
+            </div>
+        </div>
+    
+        <div class="cochesDisponibles" id="numCoches">
+            <div class="carrera1"><img src="car1.png" id="cars1" class="coches"></div>
+            <div class="carrera2"><img src="car2.png" id="cars2" class="coches"></div>
+            <div class="carrera3"><img src="car3.png" id="cars3" class="coches"></div>
+            <div class="carrera4"><img src="car4.png" id="cars4" class="coches"></div>
+            <div class="carrera5"><img src="car5.png" id="cars5" class="coches"></div>
+            <div class="carrera6"><img src="car6.png" id="cars6" class="coches"></div>
+            <div class="carrera7"><img src="car7.png" id="cars7" class="coches"></div>
+            <div class="carrera8"><img src="car8.png" id="cars8" class="coches"></div>
+            <div class="carrera9"><img src="car9.png" id="cars9" class="coches"></div>
+            <div class="carrera10"><img src="carrilfinal.jpg" id="cars10" class="coches"></div>
+        </div>     
 </div>
-</div>
-</div>
-</form>
-<h5>Elige los participantes, y haz click en Enviar</h5>
-
-
-<!--<button onclick="nParticipantes()">Enviar</button>-->
+<script src="jquery-3.6.0.js"></script>
 <script src="race.js"></script>
 </body>
 </html>

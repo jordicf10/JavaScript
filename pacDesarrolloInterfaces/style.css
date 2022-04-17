@@ -1,92 +1,266 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+svg {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font: 5em/1 Open Sans, Impact;
+    background: url(/fondosupermariobros.jpg);
+    background-size: auto;
+}
+.text {
+  fill:none;
+  stroke-width: 9;
+  font-weight: 900;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+}
+.text:nth-child(5n+1) {
+  stroke: #d01134;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text:nth-child(5n+2) {
+  stroke: #e89b01;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.text:nth-child(5n+3) {
+  stroke: #5e9e10;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+.text:nth-child(5n+4) {
+  stroke: #081386;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+.text:nth-child(5n+5) {
+  stroke: #f6fe04;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    
+}
+
+body {
+    background: url(/mariokart.jpg) no-repeat center center fixed;
+    background-position-y: -40%;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+h5 {
+    background-color: white;
 }
 
 .proyecto {
     width: 100%;
     height: 100%;
+    font-size: larger;
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-    justify-content:left;
-    align-items:flex-start;
-    background:#ffff4f;
-}
-
-.coches {
-    width: 80%;
-}
-
-.ul {
-    display: flex;
-    justify-content: space-between;
-}
-
-.ul li {
-    list-style: none;
-    position: relative;
-}
-
-.ul li::before {
-    content: '';
-    position: absolute;
-    width: 270px;
-    height: 270px;
-    background: linear-gradient(#ffff4f,#63ff63,#ff3b3b);
-    top: -10px;
-    left: -10px;
-    border-radius: 10px;
-    transition: .5s;
-}
-
-.ul li:hover:before {
-    transform: scale(.7) rotate(180deg);
-}
-
-/*.ul li source {
-    display:block;
-    margin: auto;
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    transition: .5s;
-}
-
-.ul li source:hover {
-    transform: scale(.7);
-}
-
-.ul li img {
-    width: 250px;
-    height: 250px;
-    transform: scale(1.3);
-    transition: .5s;
-}*/
-
-
-p {
-    width: fit-content;
-    height: fit-content;
-    text-align: center;
-    align-self: center;
-    border: 2px solid blue;
-    font-weight: bolder;
-    color: red;
-    font-family: Verdana;
-    font-size: 20px;
+    justify-content:center;
+    align-items:center;
     
 }
 
-h5 {
-    text-align: center;
-    /*border: 2px solid rgb(229, 65, 98);*/
-    width: fit-content;
-    height: fit-content;
-    font-weight: bolder;
-    color: rgb(37, 24, 141);
-    font-family: Verdana;
+.carrera1, .carrera2, .carrera3, .carrera4, .carrera5, .carrera6, .carrera7, .carrera8, .carrera9 {  /*Aquí están los carriles*/ 
+    
+    height: 125px;
+    background: url(/carriles.jpg);
+    background-repeat: repeat-x;
+    border-right: dashed 20px white;
+    display: none;
 }
 
+.coches {
+    display: none;
+    height: 120px;
+    position: relative;
+    object-fit: contain;
+    top: 8px;
+    
+}
 
+#cars4 {
+    height: 125px;
+    width: 130px;
+    top: 7px;
+}
+
+#cars5 {
+    height: 120px;
+    width: 130px;
+    top: 7px;
+}
+
+.carrera10 {
+
+    height: 125px;
+    background: url(/carrilfinal.jpg);
+    background-repeat: repeat-x;
+    border-right: dashed 20px white;
+    height: 8px;
+    position: relative;
+    display: none;
+    object-fit: contain;
+}
+
+.botones {
+    top: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones button {
+    font-weight:900;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.spacing {
+    padding: 0 1.5rem;
+}
+
+.botones #start {
+    background: rgb(192,10,10);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.botones .start:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.botones #reiniciar {
+    background: rgb(63, 114, 176);
+    color: white;
+}
+
+.botones .reiniciar:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.resultadoCarrera {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width:fit-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(0,0,0,0.9);
+    color: white;
+    text-align: center;
+}
+
+.resultadoCarrera::after {
+    justify-content: center;
+    align-items: center;
+    content: "";
+    display: table;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resultadoCarrera > div {
+    justify-content: center;
+    align-items: center;
+    width:max-content;
+    padding: 15px;
+    text-align: center;
+}
+
+.resultadoCoche1, .resultadoCoche2, .resultadoCoche3, .resultadoCoche4, .resultadoCoche5, .resultadoCoche6, .resultadoCoche7, .resultadoCoche8, .resultadoCoche9 {
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid gray;
+    display: none;
+    width: 162.5px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: rgba(0,0,0,0.9);
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.resultadoCarrera h4 {
+    font-size: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resultadoCarrera span {
+    font-size: 1.6rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.desactivaAudio {
+    text-align: right;
+    position:relative;
+    background: linear-gradient(red,blue,yellow);
+    background-size: auto;
+}
+.desactivaAudio button {
+    top: 10px;
+    text-align: right;
+    background: rgb(63, 114, 176);
+    color: white;
+    font-weight:30px;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    position: flex;
+    justify-content: right;
+    align-items: right;
+    
+}
